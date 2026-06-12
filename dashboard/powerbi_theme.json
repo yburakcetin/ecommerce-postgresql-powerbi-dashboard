@@ -1,0 +1,91 @@
+{
+  "name": "Ecommerce Portfolio Theme",
+  "dataColors": [
+    "#16324F",
+    "#2A9D8F",
+    "#F4A261",
+    "#6C757D",
+    "#457B9D",
+    "#E76F51",
+    "#8AB17D",
+    "#9D4EDD"
+  ],
+  "background": "#F7F9FC",
+  "foreground": "#172033",
+  "tableAccent": "#2A9D8F",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#172033"
+              }
+            },
+            "fontSize": 11,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ],
+        "labels": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#34445F"
+              }
+            },
+            "fontSize": 10,
+            "fontFamily": "Segoe UI"
+          }
+        ],
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#D9DEE8"
+              }
+            },
+            "radius": 4
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#16324F"
+              }
+            },
+            "fontSize": 20,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ],
+        "categoryLabels": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#5E687A"
+              }
+            },
+            "fontSize": 10,
+            "fontFamily": "Segoe UI"
+          }
+        ]
+      }
+    }
+  }
+}

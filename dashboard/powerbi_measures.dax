@@ -1,0 +1,79 @@
+-- Power BI DAX Measures for Ecommerce Dashboard
+-- Create these measures in the ecommerce_clean table or in a separate Measures table.
+
+Total Revenue =
+SUM(ecommerce_clean[sales_amount])
+
+Gross Revenue =
+SUM(ecommerce_clean[gross_sales])
+
+Total Orders =
+DISTINCTCOUNT(ecommerce_clean[order_id])
+
+Total Customers =
+DISTINCTCOUNT(ecommerce_clean[customer_name])
+
+Total Units Sold =
+SUM(ecommerce_clean[quantity])
+
+Average Order Value =
+DIVIDE([Total Revenue], [Total Orders])
+
+Average Unit Price =
+AVERAGE(ecommerce_clean[unit_price])
+
+Total Shipping Fees =
+SUM(ecommerce_clean[shipping_fee])
+
+Average Shipping Fee =
+AVERAGE(ecommerce_clean[shipping_fee])
+
+Discounted Orders =
+CALCULATE(
+    [Total Orders],
+    ecommerce_clean[discount_percentage] > 0
+)
+
+Discounted Order % =
+DIVIDE([Discounted Orders], [Total Orders])
+
+Estimated Discount Amount =
+[Gross Revenue] - [Total Revenue] + [Total Shipping Fees]
+
+Estimated Discount % =
+DIVIDE([Estimated Discount Amount], [Gross Revenue])
+
+Revenue per Customer =
+DIVIDE([Total Revenue], [Total Customers])
+
+Total Products =
+DISTINCTCOUNT(ecommerce_clean[product_name])
+
+Total Categories =
+DISTINCTCOUNT(ecommerce_clean[product_category])
+
+Average Sales Amount =
+AVERAGE(ecommerce_clean[sales_amount])
+
+-- Date table
+Date Table =
+CALENDAR(
+    MIN(ecommerce_clean[order_date]),
+    MAX(ecommerce_clean[order_date])
+)
+
+-- Date table calculated columns
+Year =
+YEAR('Date Table'[Date])
+
+Month Number =
+MONTH('Date Table'[Date])
+
+Month Name =
+FORMAT('Date Table'[Date], "MMM")
+
+Month Year =
+FORMAT('Date Table'[Date], "MMM YYYY")
+
+Year Month Sort =
+FORMAT('Date Table'[Date], "YYYYMM")

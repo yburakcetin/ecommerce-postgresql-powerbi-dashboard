@@ -1,0 +1,21 @@
+Ecommerce portfolio dirty dataset quality notes
+==============================================
+
+Rows: 2,361
+Columns: 12
+Exact duplicate rows intentionally included: 5
+
+Missing/fake-null values in order_id: 6
+Missing/fake-null values in customer_name: 14
+Missing/fake-null values in product_name: 0
+Missing/fake-null values in product_category: 0
+Missing/fake-null values in customer_segment: 0
+Missing/fake-null values in country: 0
+Missing/fake-null values in quantity: 23
+Missing/fake-null values in unit_price: 38
+Missing/fake-null values in discount_percentage: 28
+Missing/fake-null values in shipping_fee: 26
+Missing/fake-null values in sales_amount: 66
+Missing/fake-null values in order_date: 21
+
+Use ecommerce_raw as the untouched raw source table. Use ecommerce_clean for EDA.

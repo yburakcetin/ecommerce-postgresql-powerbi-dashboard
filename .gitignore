@@ -1,0 +1,4 @@
+# Ignore system files
+Thumbs.db
+.DS_Store
+*.swp
